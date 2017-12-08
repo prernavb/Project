@@ -24,6 +24,7 @@ public    ModelAndView  getRegistrationForm(){
 }
 @RequestMapping(value="/all/registercustomer")
 public String registerUser(@Valid @ModelAttribute User user,BindingResult result,Model model){
+		user.setRole("ROLE_USER");
 		if(result.hasErrors())//hibernate validation
 		return "registration";
 		userDAO.registerUser(user);//valid 

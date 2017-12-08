@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.model.Product;
 import com.niit.model.User;
 @Repository
 @Transactional
@@ -44,5 +45,6 @@ public class UserDaoImpl implements UserDao {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().saveOrUpdate(user);
 	}
+	
 
 }

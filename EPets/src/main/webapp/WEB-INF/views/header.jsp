@@ -34,19 +34,21 @@
 			<li><a href="/EPets/aboutUs">AboutUs</a></li>
 			
 			<li><a href="/EPets/admin/all">Browse all products</a></li>
-			
-			<li><a href="/EPets/admin/viewform">Add Product</a></li>
-			<li><a href='<c:url value="/login"></c:url>'>Sign In</a></li>
-			<li><a href='<c:url value="/all/registrationform"></c:url>'>Sign Up</a></li>
-			<c:if test="${pageContext.request.userPrincipal.name!=null }">
-		
-			<li><a href='<c:url value="/j_spring_security_logout"></c:url>'>Log Out</a></li>
+			<c:if test="${pageContext.request.userPrincipal.name==null }">
+			<li><a href="<c:url value='/login'></c:url>">Sign In</a></li>
+			<li><a href='<c:url value='/all/registrationform'></c:url>'>Sign Up</a></li>
 			</c:if>
-			</ul>
+			<c:if test="${pageContext.request.userPrincipal.name!=null }">
+			<li><a href="">Welcome ${pageContext.request.userPrincipal.name}</a></li>
+			<li><a href="<c:url value='/j_spring_security_logout'></c:url>">logout</a></li>
+			</c:if>
 		</div>
+	</div>
+
+
 	</nav>
-	
-	
+
+
 
 </body>
 </html>

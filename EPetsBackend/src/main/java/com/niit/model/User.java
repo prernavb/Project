@@ -18,7 +18,7 @@ private String username;
 @NotEmpty(message="Password cannot be blank")
 private String password;
 private boolean enabled;
-
+private String role;
 @Id
 @GeneratedValue(strategy=GenerationType.AUTO)
 private int id;
@@ -80,6 +80,12 @@ public String getPhonenumber() {
 }
 public void setPhonenumber(String phonenumber) {
 	this.phonenumber = phonenumber;
+}
+public String getRole() {
+	return role;
+}
+public void setRole(String role) {
+	this.role = role;
 }
 
 

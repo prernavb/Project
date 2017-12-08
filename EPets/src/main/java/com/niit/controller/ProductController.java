@@ -64,7 +64,7 @@ public class ProductController {
 	@RequestMapping(value = "/viewproduct/{id}")
 	public ModelAndView getProduct(@PathVariable int id) {
 		Product product=productdao.getProduct(id);
-		return new ModelAndView("viewproduct", "product", product);
+		return new ModelAndView("viewproduct", "product", product);                         
 	}
 	
 	@RequestMapping(value="/deleteProduct/{id}")
